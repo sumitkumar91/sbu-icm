@@ -257,12 +257,21 @@ const IndianClassicalMusicClub = () => {
             <h3 className="footer-title">Contact Us</h3>
             <div className="contact-item">
               <Mail size={16} />
-              <span>sbu.icm@stonybrook.edu</span>
+              <a href="mailto:sbu.icm@stonybrook.edu" style={{ marginLeft: '0.5rem', color: 'inherit', textDecoration: 'none' }}>
+              sbu.icm@stonybrook.edu
+              </a>
             </div>
           </div>
           <div className="footer-section">
             <h3 className="footer-title">Follow Us</h3>
-            <p>Instagram: @sbu-icm</p>
+            <a 
+            href="https://www.instagram.com/sbu.icm" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            style={{ color: 'inherit', textDecoration: 'none' }}
+            >
+        Instagram: @sbu.icm
+      </a>
           </div>
         </div>
         <div style={{borderTop: '1px solid rgba(255,255,255,0.2)', paddingTop: '1rem', marginTop: '2rem'}}>
