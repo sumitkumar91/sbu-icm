@@ -331,3 +331,118 @@ body {
 .eboard-card:hover {
   transform: translateY(-10px);
 }
+/* Add these media queries at the end of the file */
+
+@media (max-width: 768px) {
+  /* Header adjustments */
+  .header {
+    padding: 0.5rem 0;
+  }
+
+  .nav {
+    flex-direction: column;
+    padding: 0 1rem;
+  }
+
+  .logo {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .nav-links {
+    gap: 0.8rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-link {
+    font-size: 0.85rem;
+    padding: 0.3rem 0;
+  }
+
+  /* Hero section */
+  .hero {
+    margin-top: 70px;
+  }
+
+  .slide-title {
+    font-size: 2rem;
+  }
+
+  .slide-subtitle {
+    font-size: 1rem;
+  }
+
+  /* Sections */
+  .section {
+    padding: 3rem 1rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  /* About section */
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .about-image {
+    height: 300px;
+  }
+
+  /* Events section */
+  .events-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* E-Board section */
+  .eboard-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  /* Footer */
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .footer-section {
+    text-align: center;
+  }
+
+  .contact-item {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Further adjustments for very small screens */
+  .logo {
+    font-size: 1rem;
+  }
+
+  .nav-links {
+    gap: 0.5rem;
+  }
+
+  .slide-title {
+    font-size: 1.5rem;
+  }
+
+  .slide-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .button {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+}
