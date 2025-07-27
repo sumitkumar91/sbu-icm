@@ -1,10 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { Music, Calendar, Users, Award, Mail, Phone, MapPin } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import './App.css';
 
 const IndianClassicalMusicClub = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [activeSection, setActiveSection] = useState('home');
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   const slides = [
     {
@@ -90,37 +96,49 @@ const IndianClassicalMusicClub = () => {
 
 
   return (
-    <div className="container">
+    <div className="container" style={{ width: '100vw', margin: 0, padding: 0, overflowX: 'hidden' }}>
       {/* Header */}
       <header className="header">
         <nav className="nav">
           <div className="logo">
-            <Music size={32} />
+            <Music size={24} />
             <span>SBU Indian Classical Music Club</span>
           </div>
-          <ul className="nav-links">
-            {[
-              { name: 'Home', id: 'home' },
-              { name: 'About', id: 'about' },
-              { name: 'Events', id: 'events' },
-              { name: 'E-Board', id: 'eboard' },
-              { name: 'Contact', id: 'contact' }
-            ].map((item) => (
-              <li key={item.name}>
-                <a
-                  className="nav-link"
-                  style={{
-                    color: activeSection === item.id ? '#FF6B35' : 'white'
-                  }}
-                  onClick={() => scrollToSection(item.id)}
-                  onMouseOver={(e) => e.target.style.color = '#FF6B35'}
-                  onMouseOut={(e) => e.target.style.color = activeSection === item.id ? '#FF6B35' : 'white'}
-                >
-                  {item.name}
-                </a>
-              </li>
-            ))}
-          </ul>
+          
+          {/* Hamburger Button */}
+          <button className="hamburger" onClick={toggleMenu}>
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+          
+          {/* Navigation Links */}
+          <div className={`nav-container ${isMenuOpen ? 'open' : ''}`}>
+            <ul className="nav-links">
+              {[
+                { name: 'Home', id: 'home' },
+                { name: 'About', id: 'about' },
+                { name: 'Events', id: 'events' },
+                { name: 'E-Board', id: 'eboard' },
+                { name: 'Contact', id: 'contact' }
+              ].map((item) => (
+                <li key={item.name}>
+                  <a
+                    className="nav-link"
+                    style={{
+                      color: activeSection === item.id ? '#FF6B35' : 'white'
+                    }}
+                    onClick={() => {
+                      scrollToSection(item.id);
+                      setIsMenuOpen(false);
+                    }}
+                    onMouseOver={(e) => e.target.style.color = '#FF6B35'}
+                    onMouseOut={(e) => e.target.style.color = activeSection === item.id ? '#FF6B35' : 'white'}
+                  >
+                    {item.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
         </nav>
       </header>
   
