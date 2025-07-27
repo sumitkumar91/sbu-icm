@@ -3,6 +3,7 @@ import { Music, Calendar, Users, Award, Mail, Phone, MapPin } from 'lucide-react
 import { Menu, X } from 'lucide-react';
 import './App.css';
 
+
 const IndianClassicalMusicClub = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [activeSection, setActiveSection] = useState('home');
@@ -88,6 +89,7 @@ const IndianClassicalMusicClub = () => {
   };
 
   useEffect(() => {
+    document.title = "Indian Classical Music Club at SBU";
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
     }, 5000);
