@@ -207,7 +207,7 @@ body {
 .about-image {
   width: 70%;
   height: 400px;
-  object-fit: fill;
+  object-fit: contain;
   border-radius: 15px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
@@ -425,13 +425,14 @@ body {
 
   /* About section */
   .about-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+    text-align: center; /* Center the image */
   }
-
+  
   .about-image {
-    width: 52%;
-    height: 300px;
+    width: 100%;
+    max-width: 400px; 
+    height: auto;
+    margin: 0 auto; 
   }
 
   /* Events section */
