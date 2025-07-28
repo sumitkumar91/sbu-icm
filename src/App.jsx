@@ -33,22 +33,25 @@ const IndianClassicalMusicClub = () => {
 
   const events = [
     {
-      date: '10 Sep 2025',
-      title: 'Lorem Ipsum',
-      time: '5:00 PM - 6:00 PM',
-      venue: 'SAC 310'
+      date: '21 Aug 2025',
+      title: 'Black Box',
+      description: "Join us as we introduce our club during the Music Makers’ Jam Session!",
+      time: 'TBA',
+      venue: 'Tabler 110'
+    },
+    {
+      date: '03 Sep 2025',
+      title: 'Involvement Fair',
+      description: "Come meet us at the Involvement Fair!",
+      time: 'TBA',
+      venue: 'TBA'
     },
     {
       date: '10 Sep 2025',
-      title: 'Lorem Ipsum',
+      title: 'GBM #1',
+      description: 'Join us for our first GBM as we introduce our mission, meet the e-board, and enjoy some light activities with free packaged stuff!',
       time: '5:00 PM - 6:00 PM',
-      venue: 'SAC 310'
-    },
-    {
-      date: '10 Sep 2025',
-      title: 'Lorem Ipsum',
-      time: '5:00 PM - 6:00 PM',
-      venue: 'SAC 310'
+      venue: 'SAC 303'
     }
   ];
 
@@ -215,6 +218,7 @@ const IndianClassicalMusicClub = () => {
             >
               <div className="event-date">{event.date}</div>
               <h3 className="event-title">{event.title}</h3>
+              <p6 className="event-description">{event.description}</p6>
               <p style={{color: '#666', display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem'}}>
                 <Calendar size={16} />
                 {event.time}
