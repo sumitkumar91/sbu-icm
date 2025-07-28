@@ -205,7 +205,7 @@ body {
 }
 
 .about-image {
-  width: 100%;
+  width: 70%;
   height: 400px;
   object-fit: fill;
   border-radius: 15px;

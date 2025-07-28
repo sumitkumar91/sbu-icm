@@ -58,21 +58,28 @@ const IndianClassicalMusicClub = () => {
       role: 'President',
       year: 'Sophomore',
       major: 'Applied Math and Statistics',
-      image: 'https://images.unsplash.com/photo-1494790108755-2616c667c8cb?w=300&h=300&fit=crop'
+      image: './eboard1.jpg'
     },
     {
       name: 'Shelly Lazbin',
       role: 'Vice President and PR Head',
       year: 'Sophomore',
       major: 'Economics and Political Science',
-      image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop'
+      image: './eboard2.jpg'
     },
     {
       name: 'Sumit Kumar',
       role: 'Treasurer',
       year: 'Sophomore',
       major: 'Computer Science',
-      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop'
+      image: './eboard3.jpg'
+    },
+    {
+      name: 'Amanda Cai',
+      role: 'Secretary',
+      year: 'Sophomore',
+      major: 'Applied Math and Statistics',
+      image: './user.jpg'
     }
   ];
 
@@ -257,8 +264,8 @@ const IndianClassicalMusicClub = () => {
             <h3 className="footer-title">Contact Us</h3>
             <div className="contact-item">
               <Mail size={16} />
-              <a href="mailto:sbu.icm@stonybrook.edu" style={{ marginLeft: '0.5rem', color: 'inherit', textDecoration: 'none' }}>
-              sbu.icm@stonybrook.edu
+              <a href="mailto:sbu.icm@gmail.com" style={{ marginLeft: '0.5rem', color: 'inherit', textDecoration: 'none' }}>
+              sbu.icm@gmail.com
               </a>
             </div>
           </div>
