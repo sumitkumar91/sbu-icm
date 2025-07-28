@@ -428,7 +428,12 @@ body {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
-  
+
+  .about-image {
+    width: 52%;
+    height: 300px;
+  }
+
   /* Events section */
   .events-grid {
     grid-template-columns: 1fr;
